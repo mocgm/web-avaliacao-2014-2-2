@@ -17,6 +17,22 @@
 
     <ui:define name="content">
         <h:form>
+            <div class="titulo-form">INSCRICOES</div>
+            <h:dataTable id="inscricoes"
+            summary="Inscricoes"
+            value="#{inscricaoBean.minicursos}"
+            border="1"
+            var="item">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Numero" />
+                </f:facet>
+                <h:outputText id="numero" value="#{item.codigo}" title="Numero">  </h:outputText>
+            </h:column>
+                        
+                
+            </h:dataTable>            
+            <h:messages/>
         </h:form>
     </ui:define>
 

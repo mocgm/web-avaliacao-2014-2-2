@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="./WEB-INF/templates/principal.xhtml">
+
+    <ui:define name="styles">
+        <link href="./css/inscricao.css" rel="stylesheet" type="text/css" />
+    </ui:define>
+
+    <ui:define name="metadata">
+    </ui:define>
+
+    <ui:define name="javascript">
+    </ui:define>
+
+    <ui:define name="content">
+        <h:form>
+            <div class="titulo-form">MINICURSOS</div>
+            <h:dataTable id="minicursos"
+            summary="Minicursos"
+            value="#{inscricaoBean.inscricoes}"
+            border="1"
+            var="item">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Numero" />
+                </f:facet>
+                <h:outputText id="numero" value="#{item.numero}" title="Numero">  </h:outputText>
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="CPF" />
+                </f:facet>
+                <h:outputText id="cpf" value="#{item.cpf}" title="CPF">  </h:outputText>
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Nome" />
+                </f:facet>
+                <h:commandLink id="nome" value="#{item.nome}" action="edita" </h:commandLink>                
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Cidade" />
+                </f:facet>
+                <h:outputText id="cidade" value="#{item.cidade}" title="Cidade">  </h:outputText>
+            </h:column>
+                
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Estado" />
+                </f:facet>
+                <h:outputText id="estado" value="#{item.estado}" title="Estado">  </h:outputText>
+            </h:column>
+                
+            </h:dataTable>            
+            <h:messages/>
+        </h:form>
+    </ui:define>
+
+</ui:composition>

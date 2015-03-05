@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:p="http://primefaces.org/ui"
+template="./WEB-INF/templates/principal.xhtml">
+    <ui:define name="styles">
+    <link href="./css/inscricao.css" rel="stylesheet" type="text/css" />
+    </ui:define>
+    <ui:define name="metadata">
+    </ui:define>
+    <ui:define name="javascript">
+    </ui:define>
+    <ui:define name="content">
+        <h:form>
+            <h:panelGroup>
+            <h:outputLabel for="numero" value="Número"/>
+            <h:inputText id="numero" value="Número" size="30"
+            styleClass="ui-inputfield" style="margin-left: 5px" label="numero" maxlength="20" required="true"/>
+            </h:panelGroup>
+            <h:panelGroup>
+            <h:outputLabel for="cpf" value="CPF"/>
+            <h:inputText id="cpf" value="CPF" size="30"
+            styleClass="ui-inputfield" style="margin-left: 5px" label="cpf" maxlength="20" required="true"/>
+            </h:panelGroup>
+            <h:panelGroup>
+            <h:outputLabel for="nome" value="Nome"/>
+            <h:inputText id="nome" value="Nome" size="30"
+            styleClass="ui-inputfield" style="margin-left: 5px" label="nome" maxlength="20" required="true"/>
+            </h:panelGroup>
+            <h:panelGroup>
+            <h:outputLabel for="cidade" value="Cidade"/>
+            <h:inputText id="cidade" value="Cidade" size="30"
+            styleClass="ui-inputfield" style="margin-left: 5px" label="cidade" maxlength="20" required="true"/>
+            </h:panelGroup>
+            <h:panelGroup>
+            <h:outputLabel for="estado" value="Estado"/>
+            <h:inputText id="estado" value="Estado" size="30"
+            styleClass="ui-inputfield" style="margin-left: 5px" label="estado" maxlength="20" required="true"/>
+            </h:panelGroup>        
+        </h:form>
+    </ui:define>
+</ui:composition>
